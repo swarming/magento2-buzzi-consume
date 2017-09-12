@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Swarming Technology, LLC. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Buzzi\Consume\Api\Data\DeliveryInterface" type="Buzzi\Consume\Model\Delivery" />
+    <preference for="Buzzi\Consume\Api\DeliveryRepositoryInterface" type="Buzzi\Consume\Service\DeliveryRepository" />
+    <preference for="Buzzi\Consume\Api\QueueInterface" type="Buzzi\Consume\Service\Queue" />
+    <preference for="Buzzi\Consume\Api\HandlerRegistryInterface" type="Buzzi\Consume\Service\HandlerRegistry" />
+    <preference for="Buzzi\Consume\Api\PlatformInterface" type="Buzzi\Consume\Service\Platform" />
+
+    <type name="Buzzi\Consume\Model\Delivery\PayloadPacker">
+        <arguments>
+            <argument name="payloadFile" xsi:type="object">Buzzi\Consume\Model\PayloadFile</argument>
+        </arguments>
+    </type>
+    <virtualType name="Buzzi\Consume\Model\PayloadFile" type="Buzzi\Base\Model\PayloadFile">
+        <arguments>
+            <argument name="subFolder" xsi:type="string">consume</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Buzzi\Consume\Model\Config\Structure\Event">
+        <arguments>
+            <argument name="reader" xsi:type="object">Buzzi\Consume\Model\Config\Structure\Event\Reader\Proxy</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="buzzi_consume_queue_data_source" xsi:type="string">Buzzi\Consume\Model\ResourceModel\Delivery\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Buzzi\Consume\Model\ResourceModel\Delivery\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="const">Buzzi\Consume\Model\ResourceModel\Delivery::TABLE_NAME</argument>
+            <argument name="resourceModel" xsi:type="string">Buzzi\Consume\Model\ResourceModel\Delivery</argument>
+        </arguments>
+    </virtualType>
+</config>

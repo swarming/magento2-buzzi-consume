@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Swarming Technology, LLC. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <buzzi_base>
+            <consume>
+                <fetch_type>enabled</fetch_type>
+                <max_fetch>100</max_fetch>
+                <remove_immediately>1</remove_immediately>
+                <removing_delay>1</removing_delay>
+            </consume>
+        </buzzi_base>
+    </default>
+</config>

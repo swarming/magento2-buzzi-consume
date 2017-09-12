@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Swarming Technology, LLC. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="buzzi_consume_fetch" instance="Buzzi\Consume\Cron\Fetch" method="execute" />
+        <job name="buzzi_consume_cleaning" instance="Buzzi\Consume\Cron\QueueCleaning" method="execute">
+            <schedule>0 * * * *</schedule>
+        </job>
+    </group>
+</config>

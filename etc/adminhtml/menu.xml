@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Swarming Technology, LLC. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Buzzi_Consume::consume_queue" parent="Buzzi_Base::buzzi_menu" title="Consume Queue" action="buzzi_consume/queue/" resource="Buzzi_Consume::consume_queue" module="Buzzi_Consume" sortOrder="10"/>
+    </menu>
+</config>
