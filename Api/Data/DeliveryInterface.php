@@ -29,7 +29,7 @@ interface DeliveryInterface
 
     /**
      * @param int $deliveryId
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setDeliveryId($deliveryId);
 
@@ -40,7 +40,7 @@ interface DeliveryInterface
 
     /**
      * @param int $storeId
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setStoreId($storeId);
 
@@ -51,7 +51,7 @@ interface DeliveryInterface
 
     /**
      * @param string $eventType
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setEventType($eventType);
 
@@ -62,7 +62,7 @@ interface DeliveryInterface
 
     /**
      * @param bool $useFile
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setUseFile($useFile);
 
@@ -73,7 +73,7 @@ interface DeliveryInterface
 
     /**
      * @param string $payload
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setPayload($payload);
 
@@ -84,7 +84,7 @@ interface DeliveryInterface
 
     /**
      * @param int $counter
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setCounter($counter);
 
@@ -95,7 +95,7 @@ interface DeliveryInterface
 
     /**
      * @param string $receipt
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setReceipt($receipt);
 
@@ -106,7 +106,7 @@ interface DeliveryInterface
 
     /**
      * @param bool $isConfirmed
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setIsConfirmed($isConfirmed);
 
@@ -117,7 +117,7 @@ interface DeliveryInterface
 
     /**
      * @param string $deliveryTime
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setDeliveryTime($deliveryTime);
 
@@ -128,7 +128,7 @@ interface DeliveryInterface
 
     /**
      * @param string $handleTime
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setHandleTime($handleTime);
 
@@ -139,7 +139,7 @@ interface DeliveryInterface
 
     /**
      * @param int $status
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setStatus($status);
 
@@ -150,7 +150,7 @@ interface DeliveryInterface
 
     /**
      * @param string $errorMessage
-     * @return $this
+     * @return \Buzzi\Consume\Api\Data\DeliveryInterface
      */
     public function setErrorMessage($errorMessage);
 

@@ -22,9 +22,9 @@ interface PlatformInterface
 
     /**
      * @param string $receipt
-     * @param array $errorData
+     * @param mixed[] $errorData
      * @param int $storeId
      * @return bool
      */
-    public function submitError($receipt, array $errorData, $storeId);
+    public function submitError($receipt, $errorData, $storeId);
 }
