@@ -113,7 +113,7 @@ class Queue implements \Buzzi\Consume\Api\QueueInterface
         $fetchEnabled = $this->configGeneral->getFetchType($storeId) == FetchType::ENABLED;
 
         return $fetchAll
-            || ($fetchRegistered && in_array($fetchRegistered, $this->configEvents->getAllTypes()))
+            || ($fetchRegistered && in_array($eventType, $this->configEvents->getAllTypes()))
             || ($fetchEnabled && $this->configEvents->isEventEnabled($eventType, $storeId));
     }
 
