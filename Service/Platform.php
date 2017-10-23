@@ -83,7 +83,7 @@ class Platform implements \Buzzi\Consume\Api\PlatformInterface
      * @param int $storeId
      * @return bool
      */
-    public function submitError($receipt, array $errorData, $storeId)
+    public function submitError($receipt, $errorData, $storeId)
     {
         try {
             $result = $this->getConsumeService($storeId)->submitError($receipt, $errorData);
